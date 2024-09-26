@@ -37,6 +37,16 @@ namespace Leitor_CNAB
 
         private void Btn_OpenCNAB_Click(object sender, RoutedEventArgs e)
         {
+            
+        }
+
+        private void Btn_SaveCNAB_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_ImportREM_Click(object sender, RoutedEventArgs e)
+        {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Arquivos CNAB|*.REM";
             if (openFileDialog.ShowDialog() == true)
@@ -73,7 +83,88 @@ namespace Leitor_CNAB
             }
         }
 
-        private void Btn_ExportTXT_Click(object sender, RoutedEventArgs e)
+        private void Btn_ImportXLSX_Click(object sender, RoutedEventArgs e)
+        {
+            // Limpar todos os dados anteriores antes de importar novos
+            ClearData();
+
+            // Abrir um diálogo para selecionar o arquivo XLSX
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Arquivo Excel (*.xlsx)|*.xlsx";
+            openFileDialog.Title = "Importar Arquivo Excel";
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                // Abrir o arquivo XLSX para leitura
+                using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(openFileDialog.FileName, false))
+                {
+                    // Selecionar a primeira planilha
+                    WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+                    Sheet sheet = workbookPart.Workbook.Sheets.GetFirstChild<Sheet>();
+                    WorksheetPart worksheetPart = (WorksheetPart)workbookPart.GetPartById(sheet.Id);
+
+                    // Ler os dados da planilha
+                    SheetData sheetData = worksheetPart.Worksheet.GetFirstChild<SheetData>();
+
+                    decimal totalParcelasCNAB = 0; // Inicializa o total de parcelas do CNAB
+
+                    // Processar cada linha (ignorando a primeira, que são os cabeçalhos)
+                    foreach (Row row in sheetData.Elements<Row>().Skip(1)) // Ignorar cabeçalho
+                    {
+                        string tipoLinha = GetCellValue(workbookPart, row, 2); // Coluna C: Tipo da linha
+
+                        // Ignorar linhas que representam totais
+                        if (tipoLinha == "Total Cliente" || tipoLinha == "Total CNAB")
+                        {
+                            continue; // Ignora essas linhas
+                        }
+
+                        string cpfCnpj = GetCellValue(workbookPart, row, 0); // Coluna A: CPF/CNPJ
+                        string nome = GetCellValue(workbookPart, row, 1);    // Coluna B: Nome
+                        string dataEmissao = GetCellValue(workbookPart, row, 2); // Coluna C: Data de Emissão
+                        string valorParcela = GetCellValue(workbookPart, row, 3); // Coluna D: Valor da Parcela
+                        string dataVencimento = GetCellValue(workbookPart, row, 5); // Coluna F: Data de Vencimento
+
+                        // Verificar se o cliente já existe na lista
+                        var cliente = clientes.FirstOrDefault(c => c.CPF_CNPJ == cpfCnpj);
+                        if (cliente == null)
+                        {
+                            // Adicionar um novo cliente
+                            cliente = new Cliente { Nome = nome, CPF_CNPJ = cpfCnpj };
+                            clientes.Add(cliente);
+                        }
+
+                        // Adicionar a parcela ao cliente
+                        cliente.Parcelas.Add($"Valor: {valorParcela} | Data de Vencimento: {dataVencimento}");
+
+                        // Se a data de emissão ainda não foi atribuída, faça isso
+                        if (string.IsNullOrWhiteSpace(cliente.DatasEmissao))
+                        {
+                            cliente.DatasEmissao = dataEmissao;
+                        }
+
+                        // Atualizar o total de parcelas do cliente
+                        if (decimal.TryParse(valorParcela, out decimal valorDecimal))
+                        {
+                            cliente.TotalParcelasCliente += valorDecimal;
+
+                            // Atualizar o total de parcelas do CNAB
+                            totalParcelasCNAB += valorDecimal;
+                        }
+                    }
+
+                    // Atualizar o campo de total de parcelas do CNAB na interface
+                    Txt_CNABTotal.Text = $"R$ {totalParcelasCNAB:N2}";
+
+                    MessageBox.Show("Arquivo Excel importado com sucesso!", "Importação", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    // Atualizar a lista de clientes na interface
+                    ClientesList.ItemsSource = clientes.Select(c => $"{c.Nome} ({c.CPF_CNPJ})").ToList();
+                }
+            }
+        }
+
+        private void Btn_ExportREM_Click(object sender, RoutedEventArgs e)
         {
             // Abrir uma caixa de diálogo para selecionar onde salvar o arquivo
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -105,6 +196,11 @@ namespace Leitor_CNAB
 
                 MessageBox.Show("Arquivo .REM exportado com sucesso!", "Exportação", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+        }
+
+        private void Btn_ExportTXT_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void Btn_ExportXLSX_Click(object sender, RoutedEventArgs e)
@@ -305,6 +401,7 @@ namespace Leitor_CNAB
             Txt_CNABTotal.Text = $"R$ {totalParcelasCNAB:N2}";
         }
 
+        // Função auxiliar para obter o valor de uma célula
         // Função auxiliar para obter o valor de uma célula
         private string GetCellValue(WorkbookPart workbookPart, Row row, int cellIndex)
         {
