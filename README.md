@@ -1,21 +1,42 @@
-# Licença de Uso
+# CNAB Sync
 
-Copyright (c) 2024 Rodrigo Estape
+## Sobre
+**CNAB Sync** é um software de código aberto para leitura e manipulação de arquivos CNAB, desenvolvido por **Rodrigo Estape**. O software é fornecido como está, permitindo que você use, modifique e distribua conforme necessário. Por favor, leia a licença completa abaixo.
 
-A permissão é concedida, mediante pagamento, a qualquer pessoa que obtenha uma cópia deste software e dos arquivos de documentação associados (o "Software"), para uso pessoal e interno, sujeito às seguintes condições:
+## Licença de Uso - Código Aberto
 
-1. **Uso Pessoal e Interno**: O Software pode ser usado apenas para fins pessoais e internos. Qualquer uso comercial, incluindo, mas não se limitando a, venda, distribuição ou sublicenciamento, é estritamente proibido sem a permissão expressa por escrito do autor.
+**Copyright (c) 2024 Rodrigo Estape**
 
-2. **Uso Comercial**: O Software pode ser usado para fins comerciais apenas por bancos e fintechs que adquirirem uma licença comercial. A licença comercial deve ser adquirida diretamente do autor.
+O Software **CNAB Sync** é fornecido como código aberto e gratuito para qualquer pessoa que obtenha uma cópia deste software e dos arquivos de documentação associados (o "Software"), sujeito aos seguintes termos e condições:
 
-3. **Garantia de Funcionamento**: O autor garante o funcionamento do Software conforme descrito na documentação fornecida. Em caso de problemas, o suporte será fornecido conforme os termos acordados na licença comercial.
+### 1. Uso, Modificação e Distribuição
+- O Software pode ser usado, copiado, modificado e distribuído livremente, desde que a seguinte atribuição seja mantida em todas as cópias ou partes substanciais do Software:
+    ```
+    Copyright (c) 2024 Rodrigo Estape. Todos os direitos reservados.
+    ```
+- Modificações feitas ao Software devem ser documentadas para que outros usuários possam identificar alterações e melhorias.
 
-4. **Modificação e Distribuição**: A modificação, redistribuição ou sublicenciamento do Software é proibida sem a permissão expressa por escrito do autor.
+### 2. Uso Comercial
+- O Software pode ser usado para fins comerciais sem custo adicional. Isso inclui bancos, fintechs e outras empresas que desejam utilizar o Software em seus negócios.
+- Se desejar suporte técnico, consultoria ou desenvolvimento de funcionalidades adicionais específicas, o contato direto com o autor é recomendado.
 
-5. **Propriedade Intelectual**: O Software é protegido por direitos autorais e outras leis de propriedade intelectual. O autor retém todos os direitos, títulos e interesses no Software.
+### 3. Garantia de Funcionamento
+- O Software é fornecido "COMO ESTÁ" sem garantia de funcionamento perfeito. Não há garantias explícitas ou implícitas de que o Software atenda a finalidades específicas ou que será livre de erros.
+- Qualquer problema identificado poderá ser corrigido pela comunidade ou pelo autor a critério próprio, mas não há obrigação de fornecimento de suporte.
 
-6. **Garantia**: O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM DETERMINADO FIM E NÃO VIOLAÇÃO.
+### 4. Propriedade Intelectual e Atribuição
+- Todos os direitos autorais e avisos de propriedade presentes no Software devem ser mantidos em todas as cópias ou partes substanciais do Software.
+- O autor retém todos os direitos, títulos e interesses no Software original, mas concede o direito irrestrito para uso, modificação e distribuição.
 
-7. **Limitação de Responsabilidade**: EM NENHUM CASO O AUTOR SERÁ RESPONSÁVEL POR QUAISQUER DANOS, INCLUINDO, MAS NÃO SE LIMITANDO A, DANOS INCIDENTAIS, CONSEQUENCIAIS OU INDIRETOS, DECORRENTES DO USO OU INCAPACIDADE DE USAR O SOFTWARE.
+### 5. Garantia
+- O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM DETERMINADO FIM E NÃO VIOLAÇÃO.
 
-Ao usar o Software, você concorda com os termos desta licença.
+### 6. Limitação de Responsabilidade
+- EM NENHUM CASO O AUTOR SERÁ RESPONSÁVEL POR QUAISQUER DANOS, INCLUINDO, MAS NÃO SE LIMITANDO A, DANOS INCIDENTAIS, CONSEQUENCIAIS OU INDIRETOS, DECORRENTES DO USO OU INCAPACIDADE DE USAR O SOFTWARE, MESMO SE O AUTOR FOI AVISADO DA POSSIBILIDADE DE TAIS DANOS.
+
+### 7. Aceitação dos Termos
+- O uso do Software implica na aceitação total destes termos. Se o usuário não concordar com os termos desta licença, ele não deverá utilizar o Software.
+
+## Contato
+Para qualquer dúvida ou sugestão, entre em contato com o autor: **Rodrigo Estape**.
+
