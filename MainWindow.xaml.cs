@@ -62,7 +62,7 @@ namespace Leitor_CNAB
             {
                 var clienteSelecionado = clientes[ClientesList.SelectedIndex];
 
-                // Preencher o campo de texto com a data de emissão (mostrando apenas uma vez)
+                // Preencher o campo de texto com a data de emissão
                 Txt_DataEmission.Text = clienteSelecionado.DatasEmissao;
 
                 // Preencher a lista de parcelas formatadas do contrato
@@ -334,6 +334,7 @@ namespace Leitor_CNAB
             
             clientes.Clear();
             decimal totalParcelasCNAB = 0; // Total de parcelas do arquivo CNAB
+            long intCpfCnpj = 0;
 
             foreach (var linha in File.ReadLines(filePath))
             {
@@ -349,13 +350,63 @@ namespace Leitor_CNAB
                     continue; // Ignorar clientes com dados incompletos
                 }
 
+                // Se o cliente não estiver na lista, tenta adicionar um novo
+                try
+                {
+                    intCpfCnpj = Convert.ToInt64(cpfCnpj);
+                }
+                catch(System.FormatException ex)
+                {
+                    MessageBox.Show(string.Format("Erro ao importar, arquivo corrompido. {0}", ex.ToString()), "Erro - Importação", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                string cpfCnpjFormatado = intCpfCnpj.ToString();
+
+                // Verificar se há espaços dentro dos caracteres reservados
+                if (cpfCnpj.Contains(" "))
+                {
+                    MessageBox.Show("Erro ao importar, arquivo corrompido.", "Erro - Importação", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return; // Arquivo comprometido, interromper processamento
+                }
+
+                // Verificar se é CNPJ (14 dígitos) ou CPF (11 dígitos)
+                if (cpfCnpjFormatado.Length == 13)
+                {
+                    // Formatar como CNPJ: 00.000.000/0000-00
+                    cpfCnpjFormatado = "0" + cpfCnpjFormatado;
+                    cpfCnpjFormatado = $"CNPJ: {cpfCnpjFormatado.Substring(0, 2)}.{cpfCnpjFormatado.Substring(2, 3)}.{cpfCnpjFormatado.Substring(5, 3)}/{cpfCnpjFormatado.Substring(8, 4)}-{cpfCnpjFormatado.Substring(12, 2)}";
+                }
+                else if (cpfCnpjFormatado.Length == 14)
+                {
+                    // Formatar como CNPJ: 00.000.000/0000-00
+                    cpfCnpjFormatado = $"CNPJ: {cpfCnpjFormatado.Substring(0, 2)}.{cpfCnpjFormatado.Substring(2, 3)}.{cpfCnpjFormatado.Substring(5, 3)}/{cpfCnpjFormatado.Substring(8, 4)}-{cpfCnpjFormatado.Substring(12, 2)}";
+                }
+                else if (cpfCnpjFormatado.Length == 10)
+                {
+                    // Formatar como CPF: 000.000.000-00
+                    cpfCnpjFormatado = "0" + cpfCnpjFormatado;
+                    cpfCnpjFormatado = $"CPF: {cpfCnpjFormatado.Substring(0, 3)}.{cpfCnpjFormatado.Substring(3, 3)}.{cpfCnpjFormatado.Substring(6, 3)}-{cpfCnpjFormatado.Substring(9, 2)}";
+                }
+                else if (cpfCnpjFormatado.Length == 11)
+                {
+                    // Formatar como CPF: 000.000.000-00
+                    cpfCnpjFormatado = $"CPF: {cpfCnpjFormatado.Substring(0, 3)}.{cpfCnpjFormatado.Substring(3, 3)}.{cpfCnpjFormatado.Substring(6, 3)}-{cpfCnpjFormatado.Substring(9, 2)}";
+                }
+                else
+                {
+                    // Exibir mensagem de erro se não for um CPF ou CNPJ válido
+                    MessageBox.Show("Erro ao importar Nº inscrição do sacado", "Erro - Importação", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return; // Interromper a execução se o CPF/CNPJ for inválido
+                }
+
                 // Procurar cliente na lista
-                var cliente = clientes.FirstOrDefault(c => c.CPF_CNPJ == cpfCnpj);
+                var cliente = clientes.FirstOrDefault(c => c.CPF_CNPJ == cpfCnpjFormatado);
 
                 if (cliente == null)
                 {
-                    // Se o cliente não estiver na lista, adiciona um novo
-                    cliente = new Cliente { Nome = nome, CPF_CNPJ = cpfCnpj };
+                    // Adiciona um novo cliente com o CPF/CNPJ formatado
+                    cliente = new Cliente { Nome = nome, CPF_CNPJ = cpfCnpjFormatado };
                     clientes.Add(cliente);
                 }
 
@@ -372,7 +423,7 @@ namespace Leitor_CNAB
                     totalParcelasCNAB += valorParcela;
                 }
 
-                // Preencher a lista de datas de emissão (posição 151 a 156)
+                // **OBSOLETO** Preencher a lista de datas de emissão (posição 151 a 156)
                 string dataEmissao = linha.Substring(150, 6).Trim();
                 if (dataEmissao.Length == 6)
                 {
@@ -401,7 +452,6 @@ namespace Leitor_CNAB
             Txt_CNABTotal.Text = $"R$ {totalParcelasCNAB:N2}";
         }
 
-        // Função auxiliar para obter o valor de uma célula
         // Função auxiliar para obter o valor de uma célula
         private string GetCellValue(WorkbookPart workbookPart, Row row, int cellIndex)
         {
