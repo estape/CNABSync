@@ -25,8 +25,4 @@
     <Resource Include="Img\png\Logo2.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
-
 </Project>
