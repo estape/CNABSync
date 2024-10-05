@@ -39,7 +39,7 @@ namespace CNAB_Sync.Controller
                 {
                     MessageBox.Show(string.Format("Erro ao importar, arquivo corrompido. {0}", ex.ToString()), "CNAB Sync - Erro Importação", MessageBoxButton.OK, MessageBoxImage.Error);
                     clientInfo.Clear();
-                    return(clientInfo, "");
+                    return (clientInfo, "");
                 }
 
                 string cpfCnpjFormatado = intCpfCnpj.ToString();
