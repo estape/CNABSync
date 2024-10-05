@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Usuarios\\Rodrigo\\Documentos\\GitHub\\CNABSync\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|d:\\usuarios\\rodrigo\\documentos\\github\\cnabsync\\model\\detalhe444.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|solutionrelative:model\\detalhe444.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|d:\\usuarios\\rodrigo\\documentos\\github\\cnabsync\\controller\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|solutionrelative:controller\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|d:\\usuarios\\rodrigo\\documentos\\github\\cnabsync\\controller\\importclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|solutionrelative:controller\\importclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|d:\\usuarios\\rodrigo\\documentos\\github\\cnabsync\\model\\errorhandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|solutionrelative:model\\errorhandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Detalhe444.cs",
+              "DocumentMoniker": "D:\\Usuarios\\Rodrigo\\Documentos\\GitHub\\CNABSync\\Model\\Detalhe444.cs",
+              "RelativeDocumentMoniker": "Model\\Detalhe444.cs",
+              "ToolTip": "D:\\Usuarios\\Rodrigo\\Documentos\\GitHub\\CNABSync\\Model\\Detalhe444.cs",
+              "RelativeToolTip": "Model\\Detalhe444.cs",
+              "ViewState": "AgIAANYAAAAAAAAAAAAqwOQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T19:55:29.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ImportClass.cs",
+              "DocumentMoniker": "D:\\Usuarios\\Rodrigo\\Documentos\\GitHub\\CNABSync\\Controller\\ImportClass.cs",
+              "RelativeDocumentMoniker": "Controller\\ImportClass.cs",
+              "ToolTip": "D:\\Usuarios\\Rodrigo\\Documentos\\GitHub\\CNABSync\\Controller\\ImportClass.cs",
+              "RelativeToolTip": "Controller\\ImportClass.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwDoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T19:45:36.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ErrorHandle.cs",
+              "DocumentMoniker": "D:\\Usuarios\\Rodrigo\\Documentos\\GitHub\\CNABSync\\Model\\ErrorHandle.cs",
+              "RelativeDocumentMoniker": "Model\\ErrorHandle.cs",
+              "ToolTip": "D:\\Usuarios\\Rodrigo\\Documentos\\GitHub\\CNABSync\\Model\\ErrorHandle.cs",
+              "RelativeToolTip": "Model\\ErrorHandle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:07:59.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileManager.cs",
+              "DocumentMoniker": "D:\\Usuarios\\Rodrigo\\Documentos\\GitHub\\CNABSync\\Controller\\FileManager.cs",
+              "RelativeDocumentMoniker": "Controller\\FileManager.cs",
+              "ToolTip": "D:\\Usuarios\\Rodrigo\\Documentos\\GitHub\\CNABSync\\Controller\\FileManager.cs",
+              "RelativeToolTip": "Controller\\FileManager.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwDAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T15:21:20.615Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
