@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "CNAB Sync"
-#define MyAppVersion "1.0"
+#define MyAppVersion "1.0.2"
 #define MyAppPublisher "Rodrigo Estape"
 #define MyAppURL "https://estapetools.com/"
 #define MyAppExeName "CNAB Sync.exe"
