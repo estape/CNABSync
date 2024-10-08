@@ -17,16 +17,9 @@
         <Menu Background="#182A42" Foreground="White" Grid.Row="0">
             <MenuItem x:Name="Menu_File" Header="Arquivo">
                 <MenuItem x:Name="Btn_OpenCNAB" Foreground="Black" Header="Abrir CNAB" Click="Btn_OpenCNAB_Click"/>
-                <MenuItem x:Name="Btn_SaveCNAB" Foreground="Black" Header="Salvar CNAB" Click="Btn_SaveCNAB_Click"/>
             </MenuItem>
 
-            <MenuItem x:Name="Menu_Import_Export" Header="Importar/Exportar">
-                <MenuItem x:Name="Btn_ImportREM" Foreground="Black" Header="Importar arquivo .REM" Click="Btn_ImportREM_Click"/>
-                <MenuItem x:Name="Btn_ImportTXT" Foreground="Black" Header="Importar arquivo .txt" Click="Btn_ImportTXT_Click"/>
-                <MenuItem x:Name="Btn_ImportXLSX" Foreground="Black" Header="Importar arquivo em Excel" Click="Btn_ImportXLSX_Click"/>
-                <Separator/>
-                <MenuItem x:Name="Btn_ExportREM" Foreground="Black" Header="Exportar arquivo .REM" Click="Btn_ExportREM_Click"/>
-                <MenuItem x:Name="Btn_ExportTXT" Foreground="Black" Header="Exportar arquivo .txt" Click="Btn_ExportTXT_Click"/>
+            <MenuItem x:Name="Menu_Import_Export" Header="Exportar">
                 <MenuItem x:Name="Btn_ExportXLSX" Foreground="Black" Header="Exportar em Excel" Click="Btn_ExportXLSX_Click"/>
             </MenuItem>
 

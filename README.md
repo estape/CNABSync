@@ -10,7 +10,7 @@ O Software **CNAB Sync** é fornecido como código aberto e gratuito para qualqu
 ### 1. Uso, Modificação e Distribuição
 - O Software pode ser usado, copiado, modificado e distribuído livremente, desde que a seguinte atribuição seja mantida em todas as cópias ou partes substanciais do Software:
     ```
-    Copyright (c) 2024 Rodrigo Estape. Todos os direitos reservados.
+    2024 Rodrigo Estape. Todos os direitos reservados.
     ```
 - Modificações feitas ao Software devem ser documentadas para que outros usuários possam identificar alterações e melhorias.
 
