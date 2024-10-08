@@ -38,12 +38,33 @@ namespace Leitor_CNAB
 
         private void Btn_OpenCNAB_Click(object sender, RoutedEventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Arquivos CNAB Sync|*.SCNAB";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                // Limpar todos os dados anteriores do front antes de importar novos
+                ClearDataFront();
 
+                FileManager refFileNamager = new();
+                (clientListFinal, totalParcelasCNAB) = refFileNamager.LoadCNABSyncFile(openFileDialog.FileName);
+
+                // Atualizar a interface com os dados retornados
+                ClientesList.ItemsSource = clientListFinal
+                    .Where(c => !string.IsNullOrWhiteSpace(c.Nome) && !string.IsNullOrWhiteSpace(c.CPF_CNPJ)) // Filtra clientes válidos
+                    .Select(c => $"{c.Nome} ({c.CPF_CNPJ})").ToList();
+                Txt_CNABTotal.Text = totalParcelasCNAB; // Total de parcelas do CNAB
+            }
         }
 
         private void Btn_SaveCNAB_Click(object sender, RoutedEventArgs e)
         {
-
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Arquivos CNAB Sync|*.SCNAB";
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                FileManager refFileNamager = new ();
+                refFileNamager.SaveCNABSyncFile(clientListFinal, saveFileDialog.FileName);
+            }
         }
 
         private void Btn_ImportREM_Click(object sender, RoutedEventArgs e)
