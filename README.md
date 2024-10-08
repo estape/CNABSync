@@ -37,4 +37,3 @@ O Software **CNAB Sync** é fornecido como código aberto e gratuito para qualqu
 
 ## Contato
 Para qualquer dúvida ou sugestão, entre em contato com o autor: **Rodrigo Estape**.
-
