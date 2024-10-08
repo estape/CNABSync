@@ -5,8 +5,6 @@
 
 ## Licença de Uso - Código Aberto
 
-**Copyright (c) 2024 Rodrigo Estape**
-
 O Software **CNAB Sync** é fornecido como código aberto e gratuito para qualquer pessoa que obtenha uma cópia deste software e dos arquivos de documentação associados (o "Software"), sujeito aos seguintes termos e condições:
 
 ### 1. Uso, Modificação e Distribuição
