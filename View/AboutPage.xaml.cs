@@ -24,7 +24,7 @@ namespace CNAB_Sync.View
         {
             InitializeComponent();
 
-            string version = "1.0.1";
+            string version = "1.0.3";
             string developerName = "Rodrigo Estape";
             string description = "CNAB Sync é uma ferramenta avançada para leitura e gravação de arquivos CNAB, oferecendo suporte para exportação em formatos XLSX e CSV, além de garantir a segurança dos dados com arquivos proprietários.";
             string copyrightInfo = "© 2024 Rodrigo Estape. Todos os direitos reservados.";

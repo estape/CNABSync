@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Usuarios\\Rodrigo\\Documentos\\Visual Studio 2022\\Desktop\\Main\\CNABSync\\",
+  "WorkspaceRootPath": "D:\\Users\\Rodrigo\\Documents\\Visual Studio 2022\\Desktop\\CNABSync\\Main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|d:\\usuarios\\rodrigo\\documentos\\visual studio 2022\\desktop\\main\\cnabsync\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|d:\\users\\rodrigo\\documents\\visual studio 2022\\desktop\\cnabsync\\main\\view\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|solutionrelative:view\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|d:\\usuarios\\rodrigo\\documentos\\visual studio 2022\\desktop\\main\\cnabsync\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|d:\\usuarios\\rodrigo\\documentos\\visual studio 2022\\desktop\\main\\cnabsync\\controller\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|solutionrelative:controller\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|d:\\users\\rodrigo\\documents\\visual studio 2022\\desktop\\cnabsync\\main\\view\\aboutpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BFB744CD-A3C2-4A6D-B865-F60477D8C5CB}|CNAB Sync.csproj|solutionrelative:view\\aboutpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +23,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Usuarios\\Rodrigo\\Documentos\\Visual Studio 2022\\Desktop\\Main\\CNABSync\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\Usuarios\\Rodrigo\\Documentos\\Visual Studio 2022\\Desktop\\Main\\CNABSync\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-07T21:25:10.361Z",
+              "Title": "AboutPage.xaml.cs",
+              "DocumentMoniker": "D:\\Users\\Rodrigo\\Documents\\Visual Studio 2022\\Desktop\\CNABSync\\Main\\View\\AboutPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\AboutPage.xaml.cs",
+              "ToolTip": "D:\\Users\\Rodrigo\\Documents\\Visual Studio 2022\\Desktop\\CNABSync\\Main\\View\\AboutPage.xaml.cs",
+              "RelativeToolTip": "View\\AboutPage.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T22:21:16.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Usuarios\\Rodrigo\\Documentos\\Visual Studio 2022\\Desktop\\Main\\CNABSync\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "D:\\Usuarios\\Rodrigo\\Documentos\\Visual Studio 2022\\Desktop\\Main\\CNABSync\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAmwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T19:03:14.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FileManager.cs",
-              "DocumentMoniker": "D:\\Usuarios\\Rodrigo\\Documentos\\Visual Studio 2022\\Desktop\\Main\\CNABSync\\Controller\\FileManager.cs",
-              "RelativeDocumentMoniker": "Controller\\FileManager.cs",
-              "ToolTip": "D:\\Usuarios\\Rodrigo\\Documentos\\Visual Studio 2022\\Desktop\\Main\\CNABSync\\Controller\\FileManager.cs",
-              "RelativeToolTip": "Controller\\FileManager.cs",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAowDoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T22:22:20.971Z",
+              "Title": "AboutPage.xaml",
+              "DocumentMoniker": "D:\\Users\\Rodrigo\\Documents\\Visual Studio 2022\\Desktop\\CNABSync\\Main\\View\\AboutPage.xaml",
+              "RelativeDocumentMoniker": "View\\AboutPage.xaml",
+              "ToolTip": "D:\\Users\\Rodrigo\\Documents\\Visual Studio 2022\\Desktop\\CNABSync\\Main\\View\\AboutPage.xaml",
+              "RelativeToolTip": "View\\AboutPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-11T22:17:55.602Z",
               "EditorCaption": ""
             }
           ]
